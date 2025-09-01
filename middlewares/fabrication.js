@@ -1,6 +1,6 @@
 const { body } = require("express-validator");
 
-exports.validateProduct = [
+exports.validateFabrication = [
   body("name")
     .notEmpty()
     .isString()
