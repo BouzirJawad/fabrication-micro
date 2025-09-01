@@ -1,6 +1,6 @@
 const mongoose = require("mongoose");
 
-const FabricationProductSchema = new mongoose.Schema(
+const FabricationSchema = new mongoose.Schema(
   {
     name: {
       type: String,
@@ -25,10 +25,10 @@ const FabricationProductSchema = new mongoose.Schema(
       length: { type: Number, required: true },
       width: { type: Number, required: true },
     },
-    colors: { type: String, required: true },
+    color: { type: String, required: true },
   },
   { timestamps: true }
 );
 
-const FabricationProductModel = mongoose.model("FabricationProduct", FabricationProductSchema);
-module.exports = FabricationProductModel
+const FabricationModel = mongoose.model("FabricationProduct", FabricationSchema);
+module.exports = FabricationModel
