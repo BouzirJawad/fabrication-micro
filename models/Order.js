@@ -8,6 +8,7 @@ const orderSchema = new mongoose.Schema({
     width: { type: Number, required: true },
   },
   color: { type: String, required: true },
+  quantity: { type: Number, required: true, min: 0 },
   status: {
     type: String,
     enum: ["pending", "in-progress", "completed", "cancelled"],
