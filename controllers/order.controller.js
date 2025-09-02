@@ -10,11 +10,11 @@ const createOrder = async (req, res) => {
   }
 
   try {
-    const { clientId, name, dimensions, color, quantity } = req.body;
+    const { clientId, description, dimensions, color, quantity } = req.body;
 
     const newOrder = new Order({
       clientId,
-      name,
+      description,
       dimensions,
       color,
       quantity,

@@ -1,11 +1,11 @@
 const { body } = require("express-validator");
 
 exports.validateOrder = [
-  body("name")
+  body("description")
     .notEmpty()
     .isString()
-    .isLength({ min: 3, max: 50 })
-    .withMessage("Name must be at lease 3 characters (max 50)"),
+    .isLength({ min: 1, max: 200  })
+    .withMessage("description id required (max 200)"),
   body("color").notEmpty().withMessage("Color required"),
   body("quantity").notEmpty().isInt({ min: 0 }).withMessage("Quantity must be a positive number"),
   body("dimensions.length")
