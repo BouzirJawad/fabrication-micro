@@ -5,8 +5,8 @@ const { validateOrder } = require("../middlewares/order");
 
 router.post("/", orderController.createOrder);
 router.get("/", orderController.getOrders);
-router.get("/:OrderId", orderController.getOrderById);
-router.put("/:OrderId", validateOrder, orderController.updateOrder);
-router.delete("/:productId", orderController.cancelOrder);
+router.get("/:orderId", orderController.getOrderById);
+router.put("/:orderId", validateOrder, orderController.updateOrder);
+router.delete("/:orderId", orderController.cancelOrder);
 
 module.exports = router;
